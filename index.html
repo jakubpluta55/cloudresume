@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jakub Pluta - Cloud Resume</title>
+    <style>
+        body {{
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0 20px;
+            background-color: #f4f4f4;
+        }}
+        .container {{
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+        }}
+        h1, h2 {{
+            color: #333;
+        }}
+        ul {{
+            list-style-type: none;
+            padding: 0;
+        }}
+        li {{
+            margin-bottom: 5px;
+        }}
+        .section {{
+            margin-bottom: 30px;
+        }}
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Jakub Pluta</h1>
+    <p><strong>Location:</strong> Gdańsk / Remote</p>
+    <p><strong>Email:</strong> jakub.pluta5@gmail.com</p>
+    <p><strong>Phone:</strong> 662 660 893</p>
+    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/pluta-jakub">linkedin.com/in/pluta-jakub</a></p>
+
+    <div class="section">
+        <h2>Profile</h2>
+        <p>IT Specialist with experience in Linux systems administration and IT infrastructure monitoring, effectively supporting development teams and administrators. Currently focusing on Microsoft Azure and Kubernetes. Preparing for CKA certification.</p>
+    </div>
+
+    <div class="section">
+        <h2>Skills</h2>
+        <ul>
+            <li>Linux</li>
+            <li>Docker</li>
+            <li>Kubernetes</li>
+            <li>Azure</li>
+            <li>Git</li>
+            <li>Zabbix</li>
+            <li>Terraform</li>
+            <li>CI/CD (GitHub Actions)</li>
+            <li>Azure Functions</li>
+            <li>Cosmos DB</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Experience</h2>
+        <p><strong>Wirtualna Polska Media</strong> – IT Operator (Jul 2024 – present)</p>
+        <ul>
+            <li>Administered Linux systems and monitored IT infrastructure in 24/7 shift system</li>
+            <li>Handled incidents and ensured continuity of applications and services</li>
+        </ul>
+        <p><strong>Polpharma Biologics</strong> – IT HelpDesk (Nov 2023 – Jun 2024)</p>
+        <ul>
+            <li>Set up virtual environments and provided remote support</li>
+        </ul>
+        <p><strong>Vector Solutions</strong> – System Engineer Intern (Jul 2023 – Sep 2023)</p>
+        <ul>
+            <li>Configured Huawei servers and created technical documentation</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Education</h2>
+        <ul>
+            <li>Master’s – WSB Merito (2024–present) – Computer Science, Security of Telecommunication Systems</li>
+            <li>Bachelor’s – Gdańsk University of Technology (2020–2024) – Electronics and Telecommunications</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Certifications</h2>
+        <ul>
+            <li>AZ-900 (Azure Fundamentals)</li>
+            <li>Preparing for CKA (Certified Kubernetes Administrator)</li>
+            <li>ACERT B2 English Certificate</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Languages</h2>
+        <ul>
+            <li>Polish – Native</li>
+            <li>English – B2</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Visitors</h2>
+        <p>This page has been visited <span id="visitor-count">...</span> times.</p>
+        <script>
+            fetch("/api/visits")
+                .then(response => response.json())
+                .then(data => {{
+                    document.getElementById("visitor-count").textContent = data.count;
+                }});
+        </script>
+    </div>
+</div>
+</body>
+</html>
